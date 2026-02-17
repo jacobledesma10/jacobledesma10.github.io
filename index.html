@@ -1,76 +1,99 @@
 <!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Jacob Ledesma</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<style>
+			/* This preserves the hover effect since we removed the 'image' class from the <a> tag */
+			.work-item a.link-only {
+				display: block;
+				border: 0;
+				outline: 0;
+				position: relative;
+			}
+			.work-item a.link-only img {
+				display: block;
+				width: 100%;
+				border-radius: 4px;
+			}
+			.work-item a.link-only:after {
+				transition: opacity 0.2s ease-in-out;
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(255, 255, 255, 0.25);
+				background-image: url("assets/css/images/overlay.png"), url("assets/css/images/overlay.png");
+				opacity: 0;
+				border-radius: 4px;
+			}
+			.work-item a.link-only:hover:after {
+				opacity: 1;
+			}
+		</style>
 	</head>
 	<body id="top">
 
-		<!-- Header -->
-			<header id="header">
+		<header id="header">
 				<div class="inner">
 					<a href="#" class="image avatar"><img src="images/Jacob Ledesma Headshot.jpeg" alt="JL" /></a>
-					<h1><strong>Jacob Ledesma</strong>  <br />
-						<div>
-							
-						</div>
+					<h1><strong>Jacob Ledesma</strong><br />
 					AI Engineer & Researcher<br />
 					</h1>
 				</div>
 			</header>
 
-		<!-- Main -->
-			<div id="main">
+		<div id="main">
 
-				<!-- One -->
-					<section id="one">
+				<section id="one">
 						<header class="major">
 							<h2>Get to know me</h2>
 						</header>
 						<p>I’m an AI Engineer with a foundation in Neuroscience and advanced training in Artificial Intelligence and Applied Data Science, focused on building machine learning systems that operate at scale across both scientific and real-world environments. My interests center on computational neuroscience, biological data modeling, and applying modern AI (LLMs, deep learning, and robust data pipelines) to complex domains where accuracy, reliability, and impact matter, from healthcare and biotech to industrial systems.</p>
 						<p>Alongside my academic and research background, I bring experience working with very large, production-grade datasets in the industrial supply space, where data quality, performance, and trust directly affect real customer outcomes. I work across the full ML lifecycle: data ingestion and ETL, feature engineering, model development, evaluation, deployment, and monitoring. I’m experienced with Python, PyTorch, TensorFlow, NLP/LLMs, SQL, and cloud architectures, and I’m expanding into biomedical NLP, multimodal learning, and biological-driven systems. I’m excited to build intelligent, ethical, and high-impact AI that bridges science, industry, and human health.</p>
 						<ul class="actions">
-							<li><a href="https://www.linkedin.com/in/jacobledesma" class="button">Learn More</a></li>
+							<li><a href="https://www.linkedin.com/in/jacobledesma" class="button" target="_blank">Learn More</a></li>
 						</ul>
 					</section>
 
-				<!-- Two -->
-					<section id="two">
+				<section id="two">
 						<h2>Portfolio</h2>
 						<div class="row">
 							<article class="6u 12u$(xsmall) work-item">
-								<a href="https://github.com/dezwhatiwant/mini_capstone" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+								<a href="https://github.com/jacobledesma10/mini_capstone" class="link-only" target="_blank">
+									<img src="images/thumbs/01.jpg" alt="Backend API" />
+								</a>
 								<h3>Backend API</h3>
 							</article>
 							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="https://github.com/jacobledesma10/brain_map" class ="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+								<a href="https://github.com/jacobledesma10/brain_map" class ="link-only" target="_blank">
+									<img src="images/thumbs/01.jpg" alt="Brain Map" />
+								</a>
 								<h3>Brain Map</h3>
 							</article>
 							<article class="6u 12u$(xsmall) work-item">
-								<a href="https://github.com/jacobledesma10/neuroai-adni-classification" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+								<a href="https://github.com/jacobledesma10/neuroai-adni-classification" class="link-only" target="_blank">
+									<img src="images/thumbs/01.jpg" alt="AI Alzheimer's Diagnosis" />
+								</a>
 								<h3>AI Alzheimer's Diagnosis System</h3>
 							</article>
 							<article class="6u$ 12u$(xsmall) work-item">
-								<a href="https://github.com/jacobledesma10/life-aligned-prototype" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+								<a href="https://github.com/jacobledesma10/life-aligned-prototype" class="link-only" target="_blank">
+									<img src="images/thumbs/01.jpg" alt="Soil Data AI" />
+								</a>
 								<h3>Biologically Inspired AI System Ingesting Soil Data</h3>
 							</article>
 						</div>
 						<ul class="actions">
-							<li><a href="https://github.com/jacobledesma10" class="button">Full Portfolio</a></li>
+							<li><a href="https://github.com/jacobledesma10" class="button" target="_blank">Full Portfolio</a></li>
 						</ul>
 					</section>
 
-				<!-- Three -->
-					<section id="three">
+				<section id="three">
 						<h2>Get In Touch</h2>
 							<div class="4u$ 12u$(small)">
 								<ul class="labeled-icons">
@@ -80,38 +103,28 @@
 									</li>
 									<li>
 										<h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
-										<a href="#">jmledesma10@gmail.com</a>
+										<a href="mailto:jmledesma10@gmail.com">jmledesma10@gmail.com</a>
 									</li>
 								</ul>
 							</div>
-						</div>
 					</section>
 			</div>
 
-		<!-- Footer -->
-			<footer id="footer">
+		<footer id="footer">
 				<div class="inner">
 					<ul class="icons">
-						<li><a href="https://github.com/jacobledesma10" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="https://medium.com/@dezwhatiwant" class="icon fa-medium"><span class="label">Medium</span></a></li>
-						<li><a href="https://www.linkedin.com/in/jacobledesma" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/jacobledesma10" class="icon fa-github" target="_blank"><span class="label">Github</span></a></li>
+						<li><a href="https://medium.com/@dezwhatiwant" class="icon fa-medium" target="_blank"><span class="label">Medium</span></a></li>
+						<li><a href="https://www.linkedin.com/in/jacobledesma" class="icon fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
 					</ul>
 				</div>
 			</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.poptrox.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
-
-
-
-
-
-
